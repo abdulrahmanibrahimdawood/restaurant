@@ -96,7 +96,7 @@ class _OnBoardScreenStateState extends State<OnBoardScreenState> {
                   height: 50,
                   width: 370,
                   decoration: BoxDecoration(
-                    border: Border.all(color: Colors.black, width: 2),
+                    border: Border.all(color: Colors.black, width: .5),
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: const Center(
