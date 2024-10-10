@@ -1,3 +1,4 @@
+import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:restaurant/constant.dart';
 import 'package:restaurant/pages/first_page.dart';
@@ -24,9 +25,15 @@ class RestaurantApp extends StatelessWidget {
         kThirdPage: (context) => ThirdPage(),
       },
       debugShowCheckedModeBanner: false,
-      home: const Scaffold(
+      home: Scaffold(
         backgroundColor: Colors.white,
-        body: OnBoardScreenState(),
+        body: AnimatedSplashScreen(
+          duration: 3000,
+          splash: 'lib/assets/images/zero.png',
+          nextScreen: const OnBoardScreenState(),
+          splashTransition: SplashTransition.fadeTransition,
+          backgroundColor: kPrimaryColor,
+        ),
       ),
     );
   }

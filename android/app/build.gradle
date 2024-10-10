@@ -24,8 +24,12 @@ if (flutterVersionName == null) {
 
 android {
     namespace "com.example.restaurant"
-    compileSdkVersion flutter.compileSdkVersion
-    ndkVersion flutter.ndkVersion
+    
+    // تحديث إصدار SDK إلى الإصدار 34 (آخر إصدار متاح في 2024)
+    compileSdkVersion 34
+    
+    // التأكد من التوافق مع NDK (إذا كنت تستخدمه)
+    ndkVersion '25.2.9519653'
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -41,20 +45,20 @@ android {
     }
 
     defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
+        // تعديل الـ applicationId بما يناسب المشروع
         applicationId "com.example.restaurant"
-        // You can update the following values to match your application needs.
-        // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
-        minSdkVersion flutter.minSdkVersion
-        targetSdkVersion flutter.targetSdkVersion
+        
+        // تحديث minSdkVersion و targetSdkVersion لأحدث الإصدارات المدعومة
+        minSdkVersion 21
+        targetSdkVersion 34
+        
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
     }
 
     buildTypes {
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
+            // هنا يمكنك استخدام مفتاح التوقيع إذا كنت جاهزًا لمرحلة الإصدار
             signingConfig signingConfigs.debug
         }
     }
@@ -64,4 +68,6 @@ flutter {
     source '../..'
 }
 
-dependencies {}
+dependencies {
+    // إضافة dependencies إضافية هنا إذا كنت بحاجة إليها
+}
