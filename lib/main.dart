@@ -28,7 +28,7 @@ class RestaurantApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.white,
         body: AnimatedSplashScreen(
-          duration: 3000,
+          duration: 2000,
           splash: 'lib/assets/images/zero.png',
           nextScreen: const OnBoardScreenState(),
           splashTransition: SplashTransition.fadeTransition,
