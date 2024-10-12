@@ -48,7 +48,7 @@ class ContainerIcons extends StatelessWidget {
       height: 70,
       width: 70,
       decoration: BoxDecoration(
-        border: Border.all(color: Colors.black),
+        border: Border.all(color: Colors.black.withOpacity(0.2)),
         borderRadius: BorderRadius.circular(8),
       ),
       child: IconButton(

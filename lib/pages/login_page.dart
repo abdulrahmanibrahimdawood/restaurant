@@ -23,7 +23,7 @@ class LogInPage extends StatelessWidget {
               child: Image.asset('lib/assets/images/zero.png'),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 15),
               child: Column(
                 children: [
                   Padding(

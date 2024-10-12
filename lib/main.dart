@@ -2,6 +2,7 @@ import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:restaurant/constant.dart';
 import 'package:restaurant/pages/first_page.dart';
+import 'package:restaurant/pages/home_page.dart';
 import 'package:restaurant/pages/login_page.dart';
 import 'package:restaurant/pages/on_board_screen.dart';
 import 'package:restaurant/pages/open_app_page.dart';
@@ -27,17 +28,19 @@ class RestaurantApp extends StatelessWidget {
         kThirdPage: (context) => ThirdPage(),
         kLogInPage: (context) => LogInPage(),
         kRegister: (context) => Register(),
+        kHomePage: (context) => HomePage(),
       },
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
+      home: const Scaffold(
         backgroundColor: Colors.white,
-        body: AnimatedSplashScreen(
-          duration: 2000,
-          splash: 'lib/assets/images/zero.png',
-          nextScreen: const OnBoardScreenState(),
-          splashTransition: SplashTransition.fadeTransition,
-          backgroundColor: kPrimaryColor,
-        ),
+        body: HomePage(),
+        // AnimatedSplashScreen(
+        //   duration: 2000,
+        //   splash: 'lib/assets/images/zero.png',
+        //   nextScreen: const OnBoardScreenState(),
+        //   splashTransition: SplashTransition.fadeTransition,
+        //   backgroundColor: kPrimaryColor,
+        // ),
       ),
     );
   }
