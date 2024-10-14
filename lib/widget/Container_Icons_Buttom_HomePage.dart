@@ -7,8 +7,10 @@ class ContainerIconsButtomHomePage extends StatelessWidget {
     super.key,
     this.icon,
     this.onPressed,
+    this.color,
   });
   final IconData? icon;
+  final Color? color;
   final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
@@ -29,7 +31,7 @@ class ContainerIconsButtomHomePage extends StatelessWidget {
         onPressed: onPressed,
         icon: FaIcon(
           icon,
-          color: kPrimaryColor,
+          color: color ?? kPrimaryColor,
         ),
       ),
     );
