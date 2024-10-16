@@ -8,15 +8,22 @@ class ContainerIconsButtomHomePage extends StatelessWidget {
     this.icon,
     this.onPressed,
     this.color,
+    this.colorbox,
+    this.hight,
+    this.width,
   });
   final IconData? icon;
   final Color? color;
+  final Color? colorbox;
+  final double? hight;
+  final double? width;
+
   final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 60,
-      width: 60,
+      height: hight ?? 60,
+      width: width ?? 60,
       decoration: BoxDecoration(
         boxShadow: [
           BoxShadow(
@@ -24,7 +31,7 @@ class ContainerIconsButtomHomePage extends StatelessWidget {
               spreadRadius: 2,
               color: Colors.grey.withOpacity(0.15)),
         ],
-        color: Colors.white,
+        color: colorbox ?? Colors.white,
         borderRadius: BorderRadius.circular(8),
       ),
       child: IconButton(
