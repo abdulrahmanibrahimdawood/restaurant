@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:restaurant/constant.dart';
+import 'package:restaurant/widget/Container_In_Your_Account_Page.dart';
+import 'package:restaurant/widget/custom_account_Page_icons.dart';
 
 class YourAccount extends StatelessWidget {
   const YourAccount({super.key});
@@ -13,7 +14,9 @@ class YourAccount extends StatelessWidget {
         appBar: AppBar(
           actions: [
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pop(context);
+              },
               icon: const Icon(Icons.close),
             )
           ],
@@ -112,94 +115,48 @@ class YourAccount extends StatelessWidget {
                 arrowIcon: Icons.arrow_forward_ios,
               ),
               const SizedBox(
-                height: 30,
+                height: 50,
+              ),
+              const ContainerInYourAccountPage(
+                icon: Icons.percent,
+                text: 'Offers',
+                arrowIcon: Icons.arrow_forward_ios,
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              const ContainerInYourAccountPage(
+                icon: Icons.handshake,
+                text: 'Join us',
+                arrowIcon: Icons.arrow_forward_ios,
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              const ContainerInYourAccountPage(
+                icon: Icons.info,
+                text: 'About us',
+                arrowIcon: Icons.arrow_forward_ios,
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              const ContainerInYourAccountPage(
+                icon: Icons.phone,
+                text: 'Contact us',
+                arrowIcon: Icons.arrow_forward_ios,
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              const ContainerInYourAccountPage(
+                icon: Icons.settings,
+                text: 'Settings',
+                arrowIcon: Icons.arrow_forward_ios,
               ),
             ],
           ),
         ),
-      ),
-    );
-  }
-}
-
-class CustomAccountIcon extends StatelessWidget {
-  const CustomAccountIcon(
-      {super.key,
-      this.icon,
-      required this.text,
-      required this.hintText,
-      this.arrowIcon,
-      this.onPressed});
-
-  final IconData? icon;
-  final IconData? arrowIcon;
-  final void Function()? onPressed;
-  final String text;
-  final String hintText;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 60,
-      width: MediaQuery.of(context).size.width,
-      decoration: BoxDecoration(
-        boxShadow: [
-          BoxShadow(
-              blurRadius: 40,
-              spreadRadius: 2,
-              color: Colors.grey.withOpacity(0.15)),
-        ],
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(8),
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(left: 15),
-            child: Row(
-              children: [
-                FaIcon(
-                  icon,
-                  color: kPrimaryColor,
-                  size: 32,
-                ),
-                const SizedBox(
-                  width: 10,
-                ),
-                Text(
-                  text,
-                  style: const TextStyle(
-                      fontSize: 24, fontWeight: FontWeight.bold),
-                ),
-              ],
-            ),
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Text(
-                hintText,
-                style: const TextStyle(fontSize: 16, color: Color(0xff63DB1A)),
-              ),
-            ],
-          ),
-          Padding(
-            padding: const EdgeInsets.only(right: 2),
-            child: Row(
-              children: [
-                IconButton(
-                  onPressed: onPressed,
-                  icon: FaIcon(
-                    arrowIcon,
-                    color: kPrimaryColor,
-                    size: 32,
-                  ),
-                ),
-              ],
-            ),
-          )
-        ],
       ),
     );
   }

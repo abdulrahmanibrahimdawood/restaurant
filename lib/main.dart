@@ -30,12 +30,12 @@ class RestaurantApp extends StatelessWidget {
         kLogInPage: (context) => const LogInPage(),
         kRegister: (context) => const Register(),
         kHomePage: (context) => const HomePage(),
-        kYourAccount: (context) => const YourAccount()
+        kYourAccountpage: (context) => const YourAccount()
       },
       debugShowCheckedModeBanner: false,
       home: const Scaffold(
         backgroundColor: Colors.white,
-        body: YourAccount(),
+        body: HomePage(),
         // AnimatedSplashScreen(
         //   duration: 2000,
         //   splash: 'lib/assets/images/zero.png',
