@@ -15,7 +15,12 @@ class YourAccount extends StatelessWidget {
           actions: [
             IconButton(
               onPressed: () {
-                Navigator.pop(context);
+                if (Navigator.canPop(context)) {
+                  Navigator.pop(context);
+                } else {
+                  // هنا يمكنك عرض رسالة أو معالجة الحالة
+                  print('لا توجد شاشة سابقة للعودة إليها');
+                }
               },
               icon: const Icon(Icons.close),
             )

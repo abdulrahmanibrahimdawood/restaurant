@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:restaurant/constant.dart';
 
 class ContainerImageProfile extends StatelessWidget {
-  const ContainerImageProfile({super.key});
-
+  const ContainerImageProfile({super.key, this.onTap});
+  final void Function()? onTap;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        Navigator.popAndPushNamed(context, kYourAccountpage);
-      },
+      onTap: onTap,
       child: Container(
         height: 60,
         width: 60,

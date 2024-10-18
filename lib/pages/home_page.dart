@@ -28,21 +28,25 @@ class _HomePageState extends State<HomePage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Row(
+                  Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      ContainerIconsButtomHomePage(
+                      const ContainerIconsButtomHomePage(
                         icon: FontAwesomeIcons.bars,
                       ),
                       Row(
                         children: [
-                          ContainerIconsButtomHomePage(
+                          const ContainerIconsButtomHomePage(
                             icon: FontAwesomeIcons.bell,
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 15,
                           ),
-                          ContainerImageProfile(),
+                          ContainerImageProfile(
+                            onTap: () {
+                              Navigator.pushNamed(context, kYourAccountpage);
+                            },
+                          ),
                         ],
                       ),
                     ],
