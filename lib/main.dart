@@ -9,6 +9,7 @@ import 'package:restaurant/pages/open_app_page.dart';
 import 'package:restaurant/pages/register_page.dart';
 import 'package:restaurant/pages/scound_page.dart';
 import 'package:restaurant/pages/third_page.dart';
+import 'package:restaurant/pages/your_Account.dart';
 
 void main() {
   runApp(const RestaurantApp());
@@ -21,19 +22,20 @@ class RestaurantApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       routes: {
-        kOnBoardScreenState: (context) => OnBoardScreenState(),
-        kOpenAppPage: (context) => OpenAppPage(),
-        kFirstPage: (context) => FirstPage(),
-        kScoundPage: (context) => ScoundPage(),
-        kThirdPage: (context) => ThirdPage(),
-        kLogInPage: (context) => LogInPage(),
-        kRegister: (context) => Register(),
-        kHomePage: (context) => HomePage(),
+        kOnBoardScreenState: (context) => const OnBoardScreenState(),
+        kOpenAppPage: (context) => const OpenAppPage(),
+        kFirstPage: (context) => const FirstPage(),
+        kScoundPage: (context) => const ScoundPage(),
+        kThirdPage: (context) => const ThirdPage(),
+        kLogInPage: (context) => const LogInPage(),
+        kRegister: (context) => const Register(),
+        kHomePage: (context) => const HomePage(),
+        kYourAccount: (context) => const YourAccount()
       },
       debugShowCheckedModeBanner: false,
       home: const Scaffold(
         backgroundColor: Colors.white,
-        body: HomePage(),
+        body: YourAccount(),
         // AnimatedSplashScreen(
         //   duration: 2000,
         //   splash: 'lib/assets/images/zero.png',

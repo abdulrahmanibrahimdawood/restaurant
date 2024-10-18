@@ -9,3 +9,4 @@ const kThirdPage = 'ThirdPage';
 const kLogInPage = 'LogInPage';
 const kRegister = 'Register';
 const kHomePage = 'kHomePage';
+const kYourAccount = 'YourAccount';
