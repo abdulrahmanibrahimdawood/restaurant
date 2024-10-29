@@ -6,6 +6,7 @@ import 'package:restaurant/pages/home_page.dart';
 import 'package:restaurant/pages/login_page.dart';
 import 'package:restaurant/pages/on_board_screen.dart';
 import 'package:restaurant/pages/open_app_page.dart';
+import 'package:restaurant/pages/orderd_page.dart';
 import 'package:restaurant/pages/register_page.dart';
 import 'package:restaurant/pages/scound_page.dart';
 import 'package:restaurant/pages/third_page.dart';
@@ -30,7 +31,8 @@ class RestaurantApp extends StatelessWidget {
         kLogInPage: (context) => const LogInPage(),
         kRegister: (context) => const Register(),
         kHomePage: (context) => const HomePage(),
-        kYourAccountpage: (context) => const YourAccount()
+        kYourAccountPage: (context) => const YourAccount(),
+        kOrderdPage: (context) => const OrderdPage(),
       },
       debugShowCheckedModeBanner: false,
       home: const Scaffold(

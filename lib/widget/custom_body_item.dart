@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:restaurant/constant.dart';
 import 'package:restaurant/widget/Container_Icons_Buttom_HomePage.dart';
+import 'package:restaurant/widget/Show_Modal_Button_Sheet_Body.dart';
 
 class CustomBodyItem extends StatelessWidget {
   const CustomBodyItem({
@@ -76,17 +77,30 @@ class CustomBodyItem extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 5),
-                const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 10),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
+                      const Text(
                         r'$14.99',
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 20),
                       ),
                       ContainerIconsButtomHomePage(
+                        onPressed: () {
+                          showModalBottomSheet(
+                            shape: const RoundedRectangleBorder(
+                              borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(32),
+                                  topRight: Radius.circular(32)),
+                            ),
+                            context: context,
+                            builder: (context) {
+                              return const ShowModalButtonSheetBody();
+                            },
+                          );
+                        },
                         hight: 45,
                         width: 45,
                         icon: Icons.add,
